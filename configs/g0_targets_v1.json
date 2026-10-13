@@ -1,0 +1,63 @@
+{
+  "config_version": "g0-targets-v1",
+  "protocol_version": "1.0",
+  "family_id": "F1",
+  "master_seed": 20261012,
+  "units": "mm",
+  "coordinates": {
+    "handedness": "right",
+    "up": "Z",
+    "top_z": 0,
+    "tool_axis": [0, 0, 1]
+  },
+  "seed_rule": "uint64_be(SHA256(f'{master_seed}|{family_id}|{case_id}|G0_TARGET')[0:8])",
+  "tolerances": {
+    "bbox_mm": 0.001,
+    "volume_abs_mm3": 0.001,
+    "volume_rel": 1e-6
+  },
+  "cases": [
+    {
+      "case_id": "S01",
+      "family_id": "F1",
+      "ancestor_id": null,
+      "stock": {"L": 60, "W": 50, "H": 16},
+      "target": {"kind": "rounded_rect_blind_pocket", "a": 30, "b": 24, "R": 3, "d": 6}
+    },
+    {
+      "case_id": "S02",
+      "family_id": "F1",
+      "ancestor_id": null,
+      "stock": {"L": 80, "W": 45, "H": 16},
+      "target": {"kind": "rounded_rect_blind_pocket", "a": 54, "b": 14, "R": 3, "d": 5}
+    },
+    {
+      "case_id": "S03",
+      "family_id": "F1",
+      "ancestor_id": null,
+      "stock": {"L": 60, "W": 55, "H": 20},
+      "target": {"kind": "rounded_rect_blind_pocket", "a": 36, "b": 30, "R": 4, "d": 12}
+    },
+    {
+      "case_id": "S04",
+      "family_id": "F1",
+      "ancestor_id": null,
+      "stock": {"L": 70, "W": 55, "H": 16},
+      "target": {"kind": "rounded_rect_blind_pocket", "a": 46, "b": 32, "R": 2, "d": 4}
+    },
+    {
+      "case_id": "S05",
+      "family_id": "F1",
+      "ancestor_id": null,
+      "stock": {"L": 60, "W": 50, "H": 12},
+      "target": {"kind": "rounded_rect_blind_pocket", "a": 48, "b": 36, "R": 3, "d": 3}
+    },
+    {
+      "case_id": "S06",
+      "family_id": "F1",
+      "ancestor_id": null,
+      "stock": {"L": 55, "W": 50, "H": 20},
+      "target": {"kind": "rounded_rect_blind_pocket", "a": 24, "b": 20, "R": 4, "d": 10}
+    }
+  ]
+}
