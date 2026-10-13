@@ -1,0 +1,36 @@
+{
+  "schema_version": "smoke-v1",
+  "description": "Environment smoke step 1 fixture: rectangular stock with a rectangular top blind cavity. Explicitly simpler than the protocol rounded-pocket G0; not a Q3 or G0 artifact.",
+  "source_protocol": {
+    "document": "docs/I001A_executable_pilot_plan.md",
+    "version": "1.0"
+  },
+  "units": "mm",
+  "coordinate_system": {
+    "handedness": "right-handed",
+    "axes": ["X", "Y", "Z"],
+    "z_axis": "up"
+  },
+  "stock": {
+    "intervals": {
+      "x": [0, 20],
+      "y": [0, 16],
+      "z": [-10, 0]
+    }
+  },
+  "cavity": {
+    "kind": "top_blind_rectangular",
+    "intervals": {
+      "x": [6, 14],
+      "y": [5, 11],
+      "z": [-3, 0]
+    }
+  },
+  "tolerances": {
+    "bbox_extremum_mm": 0.001,
+    "volume_abs_mm3": 0.001,
+    "volume_relative": 1e-6
+  },
+  "tolerance_note": "Protocol STEP tolerances: every bounding-box extremum within 0.001 mm and volume error within max(0.001 mm3, 1e-6 * original volume). The smoke-only analytic comparison reuses exactly these tolerances.",
+  "analytic_note": "scripts/smoke_geometry.py derives stock 20x16x10 = 3200 mm3, cavity 8x6x3 = 144 mm3, and final 3056 mm3 by ordinary arithmetic on the intervals above; no expected volume is read back from this file."
+}
